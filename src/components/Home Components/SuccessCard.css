@@ -1,0 +1,40 @@
+.Scard {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  align-items: start;
+  height: 32vh;
+  width: 25vw;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
+  padding: 0rem 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.Scard .ScardUl {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures the ul takes full height */
+  width: 100%;
+}
+
+.Scard .ScardUl li {
+  list-style: none;
+}
+
+/* Pushes the last two headings to the bottom without weird spacing */
+.Scard .spacer {
+  flex-grow: 1;
+}
+
+.Scard .ScardUl img {
+  height: 10vh;
+  margin-left: -1rem;
+  margin-bottom: -1rem;
+}
+
+.Scard:hover {
+  box-shadow: 0.75rem 0.75rem 1rem rgba(0, 0, 0, 0.5);
+}

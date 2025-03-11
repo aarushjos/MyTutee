@@ -1,0 +1,21 @@
+.Courses {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+.Courses h1 {
+  margin: 1.5rem 8rem;
+  color: #161e64;
+  font-size: 3rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.537);
+}
+.Courses ul {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  justify-content: space-evenly;
+}
+.Courses ul li {
+  list-style: none;
+}

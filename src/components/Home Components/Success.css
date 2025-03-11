@@ -1,0 +1,24 @@
+.Success {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6rem;
+  background: linear-gradient(#bad4ef, #c6d9ef);
+}
+.Success h1 {
+  margin: 1.5rem 8rem;
+  margin-top: 4rem;
+  color: #161e64;
+  font-size: 3rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.537);
+}
+.Success .cardList {
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+.Success .cardList li {
+  list-style: none;
+}

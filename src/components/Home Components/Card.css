@@ -1,0 +1,16 @@
+.Card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  align-items: center;
+  height: 55vh;
+  width: 22vw;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+.Card:hover {
+  box-shadow: 0.75rem 0.75rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.Universities {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.Universities h1 {
+  padding: 1.5rem;
+  font-size: 2rem;
+  color: #161e64;
+  margin-top: 1rem;
+}
+.Universities ul {
+  display: flex;
+  align-items: center;
+}
+.Universities ul li {
+  list-style: none;
+}
+.Universities ul li img {
+  margin: 0 4rem;
+  margin-bottom: 2rem;
+}

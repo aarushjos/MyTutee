@@ -1,0 +1,29 @@
+.FAQ {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8rem;
+}
+
+.FAQ h1 {
+  margin: 1.5rem 8rem; /* Centered the title instead of pushing it right */
+  color: #161e64;
+  font-size: 2.5rem; /* Slightly reduced font size for better responsiveness */
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.537);
+}
+
+.FAQ ul {
+  margin: 0 auto; /* Centered the list */
+  padding: 2rem 4rem;
+  width: 85%;
+  border: 0.2rem solid #161e6446;
+}
+
+.FAQ ul li {
+  list-style: none;
+  padding: 8px 0; /* Added slight vertical spacing for readability */
+}
+
+.FAQ ul li:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
