@@ -55,6 +55,7 @@
 
   .CardDescription {
     font-size: 0.9rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -70,5 +71,6 @@
 
   .CardDescription {
     font-size: 0.8rem;
+    padding-bottom: 1rem;
   }
 }
