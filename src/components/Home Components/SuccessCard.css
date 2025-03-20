@@ -37,6 +37,9 @@
 .Scard:hover {
   box-shadow: 0.75rem 0.75rem 1rem rgba(0, 0, 0, 0.5);
 }
+.Scard h4 {
+  font-size: 1.2rem;
+}
 
 @media (max-width: 768px) {
   .Scard {
@@ -46,9 +49,13 @@
 }
 
 @media (max-width: 480px) {
+  .Scard h4 {
+    font-size: 1rem;
+    padding-right: 1rem;
+  }
   .Scard {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
     padding: 1rem;
   }
 }
