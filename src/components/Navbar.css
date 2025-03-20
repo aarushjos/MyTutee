@@ -12,6 +12,7 @@ nav {
   background-color: #c6d9ef;
   top: 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
 }
 nav .Logo {
   width: 12vw;

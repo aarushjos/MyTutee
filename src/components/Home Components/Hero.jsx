@@ -1,29 +1,61 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 import chickwithU from "../../assets/images/chickwithU.png";
-import './Hero.css';
-import { Link } from 'react-router-dom';
+import "./Hero.css";
 
 export const Hero = (props) => {
+  const [currentStep, setCurrentStep] = useState(0);
+  const headings = ["Every Student's", "Education Platform", "In The World"];
+  const description = "Your journey to excellence starts here. Explore a world of possibilities and shape the future you deserve.";
+
+  useEffect(() => {
+    if (currentStep <= headings.length) {
+      const timer = setTimeout(() => {
+        setCurrentStep((prev) => prev + 1);
+      }, 1800); // Smooth transition timing
+      return () => clearTimeout(timer);
+    }
+  }, [currentStep]);
+
   return (
-    <div className='Hero'>
-      <ul>
-        <li><h1 style={{ color: '#5C5B8F' }}>Every Student's</h1></li>
-        <li><h1 style={{ color: '#161E64' }}>Education Platform</h1></li>
-        <li><h1 style={{ color: '#5E5BFB' }}>In The World</h1></li>
-        <li>
-          <h6 style={{ color: '#5F5B5B' ,fontSize:"1.5rem"}}>
-            Your journey to excellence starts here. Explore a world of possibilities and shape
-            the future you deserve.
+    <div className="Hero">
+      <ul className="HeroTextContainer">
+        {headings.map((text, index) => (
+          <li key={index} className={`HeroTitle ${index <= currentStep ? "visible" : "hidden"}`}>
+            <h1
+              style={{ fontSize: "4rem" }}
+              className={index === 0 ? "PrimaryColor" : index === 1 ? "SecondaryColor" : "AccentColor"}
+            >
+              {index === currentStep ? (
+                <Typewriter words={[text]} typeSpeed={50} cursor cursorStyle="|" />
+              ) : (
+                text
+              )}
+            </h1>
+          </li>
+        ))}
+
+        {/* H6 is always in the DOM but hidden until needed */}
+        <li className={`HeroDescription ${currentStep > headings.length - 1 ? "visible" : "hidden"}`}>
+          <h6>
+            {currentStep >= headings.length ? (
+              <Typewriter words={[description]} typeSpeed={35} cursor cursorStyle="|" />
+            ) : (
+              ""
+            )}
           </h6>
         </li>
-        {/* Show Start button only if props.temp is false */}
+
         {!props.temp && (
           <li>
-            <Link to="/login"><button className='Start'>Start</button></Link>
+            <Link to="/login">
+              <button className="Start">Start</button>
+            </Link>
           </li>
         )}
       </ul>
-      <img src={chickwithU} alt='GirlwithLogo' className='Mascot' />
+      <img src={chickwithU} alt="Girl with Logo" className="Mascot" />
     </div>
   );
 };

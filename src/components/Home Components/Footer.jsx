@@ -7,7 +7,7 @@ export const Footer = () => {
     <div className="Footer">
         <ul>
             <li><h3>query@mytutee.com</h3></li>
-            <li><img src={logo}></img></li>
+            <li><img src={logo} alt="Mytutee Logo" className="FooterLogo" /></li>
             <li><h3>+91 99103 44403</h3></li>
         </ul>
     </div>
